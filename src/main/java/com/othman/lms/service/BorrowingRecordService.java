@@ -11,7 +11,6 @@ import com.othman.lms.repository.PatronRepository;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,7 +27,7 @@ public class BorrowingRecordService {
     private final PatronRepository patronRepository;
     private final BorrowingRecordMapper borrowingRecordMapper;
 
-    
+
     public BorrowingRecordDTO borrowBook(Long bookId, Long patronId) {
         Book book = bookRepository.findById(bookId)
                                   .orElseThrow(() -> new RuntimeException("Book not found"));

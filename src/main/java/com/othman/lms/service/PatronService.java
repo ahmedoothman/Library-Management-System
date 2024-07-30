@@ -34,13 +34,12 @@ public class PatronService {
         return patronRepository.findById(id).map(patronMapper::toDto).orElseThrow(() -> new ResourceNotFoundException("Patron not found with ID: " + id));
     }
 
-    @Transactional
+
     public PatronDTO save(PatronDTO patronDTO) {
         Patron patron = patronMapper.toEntity(patronDTO);
         Patron savedPatron = patronRepository.save(patron);
         return patronMapper.toDto(savedPatron);
     }
-    @Transactional
     public PatronDTO update(Long id, PatronDTO patronDTO) {
         Optional<Patron> existingPatron = patronRepository.findById(id);
         if (existingPatron.isPresent()) {

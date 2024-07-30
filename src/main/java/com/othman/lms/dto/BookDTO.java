@@ -17,6 +17,4 @@ public class BookDTO {
     private String isbn;
     @NotNull(message = "Publication year is required")
     private Integer publicationYear;
-    @NotBlank(message = "Genre is required")
-    private String genre;
 }
