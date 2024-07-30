@@ -66,22 +66,30 @@ Build the Project
 
 If you're using Maven:
 
-bash
+```bash
 mvn clean install
+```
+
 If you're using Gradle:
 
-bash
+```bash
 ./gradlew build
+```
+
 Run the Application
 
 You can run the Spring Boot application from the command line:
 
-bash
+```bash
 mvn spring-boot:run
+```
+
 or
 
-bash
+```bash
 ./gradlew bootRun
+```
+
 Access the Application
 
 Open your web browser and navigate to http://localhost:8080/swagger-ui.html to view the Swagger UI and interact with the API.
@@ -89,11 +97,15 @@ Open your web browser and navigate to http://localhost:8080/swagger-ui.html to v
 Testing
 Run the unit tests to validate the functionality of API endpoints:
 
-bash
+```bash
 mvn test
+```
+
 or
 
-bash
+```bash
 ./gradlew test
+```
+
 Documentation
 For detailed API documentation, refer to the Swagger UI and the OpenAPI JSON description linked above.
